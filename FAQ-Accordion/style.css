@@ -30,6 +30,34 @@ p, h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'WorkSans';
+  src: url('FAQ-Accordion\public\fonts\WorkSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('FAQ-Accordion\public\fonts\WorkSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('FAQ-Accordion\public\fonts\WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url('FAQ-Accordion\public\fonts\WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
 /* colors */
 :root {
   --first-bg-mobile: url('./background-pattern-desktop.svg');
