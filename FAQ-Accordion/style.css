@@ -161,9 +161,12 @@ body::before {
 }
 
 .container__title__description {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s cubic-bezier(0, 1, 0, 1);
 }
 
 .container__title-wrapper.active .container__title__description {
-  display: block;
+  max-height: 18rem;
+  transition: max-height 1s ease-in-out;
 }
