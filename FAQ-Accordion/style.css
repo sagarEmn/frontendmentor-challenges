@@ -9,6 +9,11 @@
   margin: 0;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -76,6 +81,27 @@ body {
   font-size: var(--fs-body);
   font-style: normal;
   font-weight: normal;
+  background-color: var(--light-pink);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 33.33%;
+  min-height: 100%;
+  background-image: url("public/background-pattern-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
 }
 
 .container__header {
