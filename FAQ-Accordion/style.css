@@ -84,7 +84,7 @@ body {
   font-size: var(--fs-header);
 }
 
-.container__title p {
+.container__description {
   color: var(--fc-primary);
   font-size: var(--fs-title);
   font-weight: var(--fw-semibold);
