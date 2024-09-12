@@ -12,6 +12,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-size: var(--fs-body);
 }
 
 input,
@@ -42,15 +43,25 @@ h6 {
   --icon-plus: url("FAQ-Accordion\public\icon-plus.svg");
   --icon-star: url("FAQ-Accordion\public\icon-star.svg");
 
+  /* typography */
+  --ff-body: var("--font-worksans-regular");
+
+  /* font size */
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+
+  --fs-body: var(--fs-sm);
+  --fs-paragraph: var(--fs-xl);
+  --fs-header: var(--fs-xl);
+
   /* colors */
   --white: hsl(0, 0%, 100%);
   --light-pink: hsl(275, 100%, 97%);
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
 
-  /* typography */
-  --ff-body: var("--font-worksans-regular");
-  --fs-body: 16px;
   --fc-primary: var(--dark-purple);
   --fc-secondary: var(--grayish-purple);
 }
@@ -62,7 +73,8 @@ body {
   font-weight: normal;
 }
 
-.header {
+.container__header {
   font-family: "Work Sans";
   color: var(--fc-primary);
 }
+
