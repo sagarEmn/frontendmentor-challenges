@@ -33,46 +33,6 @@ h6 {
 }
 /* css reset */
 
-/* font-definitions */
-@font-face {
-  font-family: "WorkSans";
-  src: url("FAQ-Accordion\public\fonts\WorkSans-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "WorkSans";
-  src: url("FAQ-Accordion\public\fonts\WorkSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "WorkSans";
-  src: url("FAQ-Accordion\public\fonts\WorkSans-SemiBold.ttf")
-    format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "WorkSans";
-  src: url("FAQ-Accordion\public\fonts\WorkSans-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "WorkSans";
-  src: url("FAQ-Accordion\public\fonts\WorkSans-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 900;
-  font-style: italic;
-}
-
-/* colors */
 :root {
   /* background svg */
   --first-bg-mobile: url("./background-pattern-desktop.svg");
@@ -89,5 +49,64 @@ h6 {
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
 
-  /* --ff-body: "WorkSans"; */
+  --ff-body: "WorkSans";
+  --fs-body: 16px;
+
+  /* Regular font */
+  --font-worksans-regular: url("FAQ-Accordion/public/fonts/WorkSans-Regular.ttf")
+    format("truetype");
+
+  /* Bold font */
+  --font-worksans-bold: url("FAQ-Accordion/public/fonts/WorkSans-Bold.ttf")
+    format("truetype");
+
+  /* Semi-Bold font */
+  --font-worksans-semibold: url("FAQ-Accordion/public/fonts/WorkSans-SemiBold.ttf")
+    format("truetype");
+
+  /* Variable font-weight (normal style) */
+  --font-worksans-variable: url("FAQ-Accordion/public/fonts/WorkSans-VariableFont_wght.ttf")
+    format("truetype");
+
+  /* Variable font-weight (italic style) */
+  --font-worksans-variable-italic: url("FAQ-Accordion/public/fonts/WorkSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
+
+  --fc-body: ;
+}
+
+/* font-definitions */
+@font-face {
+  font-family: "WorkSans";
+  src: var(--font-worksans-regular);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: var(--font-worksans-bold);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: var(--font-worksans-semibold);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: var(--font-worksans-variable);
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: var(--font-worksans-variable-italic);
+  font-weight: 100 900;
+  font-style: italic;
 }
