@@ -114,6 +114,7 @@ body::before {
   background-color: var(--bg-secondary);
   padding: 2rem;
   border-radius: 1.5rem;
+  max-width: 28.125rem;
 }
 
 .container__header-wrapper {
@@ -131,9 +132,16 @@ body::before {
 .container__title-wrapper {
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
 }
 
-.container__description {
+.container__title-main {
+  flex: 1;
+}
+
+.container__title {
   color: var(--fc-primary);
   font-size: var(--fs-title);
   font-weight: var(--fw-semibold);
@@ -143,4 +151,19 @@ body::before {
   width: 2.5rem;
   height: 2.5rem;
   display: inline-block;
+}
+
+.container__title-icon {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.container__title__description {
+  display: none;
+}
+
+.container__title-wrapper.active .container__title__description {
+  display: block;
 }
