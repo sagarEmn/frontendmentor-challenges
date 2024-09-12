@@ -91,7 +91,7 @@ body {
   align-items: center;
 }
 
-.wrapper::before {
+body::before {
   content: "";
   position: absolute;
   top: 0;
