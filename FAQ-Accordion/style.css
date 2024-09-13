@@ -82,6 +82,7 @@ h6 {
 }
 
 body {
+  overflow-x: hidden;
   font-family: "WorkSans", sans-serif;
   font-size: var(--fs-body);
   font-style: normal;
