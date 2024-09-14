@@ -1,96 +1,161 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --clr-primary-400: hsl(158, 386%, 37%);
+  --clr-primary-500: hsl(158, 386%, 17%);
+  --clr-secondary-200: hsl(30, 38%, 92%);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --clr-neutral-800: hsl(212, 21%, 14%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font family */
+  --ff-accent: "Fraunces", serif;
+  --ff-base: "Montserrat", sans-serif;
+
+  /* font weight */
+  --fw-regular: 500;
+  --fw-bold: 700;
+
+  /* font size */
+  --fs-regular: 0.9375rem;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* css reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
+
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1 {
+  overflow: break-word;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  line-height: 1;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+/* css reset */
+
+/* general styling */
+
+body {
+  box-sizing: border-box;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-regular);
+  background-color: var(--clr-secondary-200);
+
+  /* display */
+  margin: 1rem;
+  min-height: 100%;
+  display: grid;
+  place-content: center;
 }
 
-.card {
-  padding: 2em;
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.read-the-docs {
-  color: #888;
+.product {
+  max-width: 600px;
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+
+  display: grid;
+
+  background: var(--clr-neutral-100);
+  border-radius: 0.8rem;
+  overflow: hidden;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+@media screen and (min-width: 600px) {
+  .product {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product__content {
+  padding: var(--content-padding);
+  display: grid;
+  gap: var(--content-spacing);
+}
+
+.product__category {
+  letter-spacing: 0.313rem;
+  text-transform: uppercase;
+}
+
+.product__title {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--clr-neutral-800);
+}
+
+.product__price {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--clr-primary-400);
+}
+
+.button {
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 0.925rem;
+  border-radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.button[data-icon="shopping-cart"]::before {
+  content: "";
+  width: 15px;
+  height: 16px;
+  background-image: url('./images/icon-cart.svg');
 }
+
+.button:is(:hover, :focus) {
+  background-color: var(--clr-primary-500);
+}
+
+
