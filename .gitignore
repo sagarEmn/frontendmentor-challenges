@@ -27,4 +27,4 @@ logs
 **/*.sw?
 
 # Ignore md files
-**/style-guide.md
+# **/style-guide.md
