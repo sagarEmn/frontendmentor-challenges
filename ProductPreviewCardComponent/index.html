@@ -30,7 +30,8 @@
     <main>
       <article class="product">
         <picture class="product__img">
-          <img src="./images/image-product-desktop.jpg" alt="" />
+          <source srcset="./images/image-product-desktop.jpg" media="(min-width: 600px)"/>
+          <img src="./images/image-product-mobile.jpg" alt="" />
         </picture>
         <div class="product__content">
           <p class="product__category">Perfume</p>
@@ -47,7 +48,7 @@
             <p class="product__original-price">$169.99</p>
           </div>
 
-          <button class="button">Add to Cart</button>
+          <button class="button" data-icon="shopping-cart">Add to Cart</button>
         </div>
       </article>
     </main>
