@@ -209,9 +209,15 @@ body {
     display: none;
 
     position: absolute;
+    padding: var(--size-700);
     inset: 7rem var(--size-400);
     background-color: var(--clr-neutral-100);
     border-radius: var(--size-100);
+  }
+
+  .primary-navigation::after {
+    content: '';
+    position: absolute;
   }
 
   .nav-list {
@@ -219,6 +225,11 @@ body {
     display: grid;
     gap: var(--size-600);
     font-weight: var(--fw-bold);
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus {
+    color: var(--clr-accent-400);
   }
 
   .nav-list a {
