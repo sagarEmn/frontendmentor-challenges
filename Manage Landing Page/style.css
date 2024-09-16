@@ -187,6 +187,7 @@ body {
 }
 
 .nav-wrapper {
+  display: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -208,22 +209,27 @@ body {
   .primary-navigation {
     display: none;
 
-    position: absolute;
+    position: fixed;
     padding: var(--size-700);
-    inset: 7rem var(--size-400);
-    background-color: var(--clr-neutral-100);
+    inset: 7rem var(--size-400) auto;
+    max-width: 25rem;
+    margin-left: auto;
+    background: var(--clr-neutral-100);
     border-radius: var(--size-100);
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
   }
 
-  .primary-navigation::after {
-    content: '';
-    position: absolute;
+  .primary-header[data-overlay]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
   }
 
   .nav-list {
-    text-align: center;
     display: grid;
     gap: var(--size-600);
+    text-align: center;
     font-weight: var(--fw-bold);
   }
 
@@ -239,11 +245,13 @@ body {
 
   .primary-navigation[data-visible] {
     display: block;
-    position: fixed;
   }
 
   .mobile-nav-toggle {
     display: block;
+    position: fixed;
+    top: var(--size-600);
+    right: var(--size-400);
     cursor: pointer;
     background: transparent;
     border: 0;
