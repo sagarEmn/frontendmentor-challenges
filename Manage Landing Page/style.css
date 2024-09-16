@@ -11,10 +11,10 @@
   --clr-neutral-900: hsl(232, 12%, 13%);
   --clr-neutral-100: hsl(0 0% 100%);
 
-  --ff-primary: "Be Vietname Pro", sans-serif;
+  --ff-primary: "Be Vietnam Pro", sans-serif;
 
   --ff-body: var(--ff-primary);
-  --ff-accent: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
 
   --fw-regular: 400;
   --fw-semi-bold: 500;
@@ -26,7 +26,7 @@
   --fs-600: 1rem;
   --fs-700: 1.875rem;
   --fs-800: 2.5rem;
-  --fs-900: 2.5rem;
+  --fs-900: 3.5rem;
 
   --fs-body: var(--fs-400);
   --fs-primary-heading: var(--fs-800);
@@ -148,6 +148,26 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
 /* button */
 
 .button {
@@ -183,18 +203,13 @@ body {
 /* navigation */
 
 .primary-header {
-  margin-top: var(--size-700);
+  padding-top: var(--size-700);
 }
 
 .nav-wrapper {
-  display: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.primary-navigation {
-  height: fit-content;
+  align-items: center;
 }
 
 .mobile-nav-toggle {
@@ -203,6 +218,22 @@ body {
 
 .nav-list {
   font-size: var(--fs-nav);
+}
+
+.nav-list {
+  display: flex;
+  gap: clamp(var(--size-400), 5vw, var(--size-700));
+  font-weight: var(--fw-semi-bold);
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--clr-primary-400);
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--clr-accent-400);
 }
 
 @media (max-width: 50em) {
@@ -223,6 +254,7 @@ body {
     content: "";
     position: fixed;
     inset: 0;
+    /* height: 100vh; */
     background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
   }
 
@@ -231,16 +263,6 @@ body {
     gap: var(--size-600);
     text-align: center;
     font-weight: var(--fw-bold);
-  }
-
-  .nav-list a:hover,
-  .nav-list a:focus {
-    color: var(--clr-accent-400);
-  }
-
-  .nav-list a {
-    color: var(--clr-primary-400);
-    text-decoration: none;
   }
 
   .primary-navigation[data-visible] {
