@@ -1,3 +1,5 @@
+@import "css-reset.css";
+
 :root {
   --clr-accent-500: hsl(12, 60%, 45%);
   --clr-accent-400: hsl(12, 88%, 59%);
@@ -51,46 +53,6 @@
     --fs-nav: var(--fs-300);
   }
 }
-
-/* css reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img,
-picture {
-  display: block;
-  max-width: 100%;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-/* css reset */
 
 /* utility classes */
 
@@ -163,6 +125,16 @@ h6 {
   padding-block: var(--size-700);
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* general styling */
 body {
   font-size: var(--fs-body);
@@ -206,4 +178,37 @@ body {
 .button[data-type="inverted"]:focus-visible {
   background-color: var(--clr-neutral-100);
   color: var(--clr-accent-300);
+}
+
+/* navigation */
+
+.primary-header {
+  margin-top: var(--size-700);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .primary-navigation {
+    display: none;
+  }
+}
+
+.mobile-nav-toggle {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0.5em;
+}
+
+.mobile-nav-toggle .icon-close {
+  display: none;
 }
