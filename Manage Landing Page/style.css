@@ -156,6 +156,10 @@ body {
   margin-inline: auto;
 }
 
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 4em)
+}
+
 .even-columns {
   display: grid;
   gap: 1rem;
