@@ -101,7 +101,7 @@
 .fs-primary-heading {
   font-size: var(--fs-primary-heading);
 }
-.fs-seconary-heading {
+.fs-secondary-heading {
   font-size: var(--fs-secondary-heading);
 }
 
@@ -142,6 +142,15 @@ body {
   color: var(--clr-primary-400);
 }
 
+p:not([class]) {
+  opacity: 0.7;
+  max-width: 32ch;
+}
+
+p[data-width="wide"] {
+  max-width: 42ch;
+}
+
 .even-columns {
   display: grid;
   gap: 1rem;
@@ -157,7 +166,7 @@ body {
 }
 
 :where(.flow :not(:first-child)) {
-  margin-top: var(--flow-spacer, 4em)
+  margin-top: var(--flow-spacer, 4em);
 }
 
 .even-columns {
