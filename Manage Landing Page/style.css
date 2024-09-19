@@ -135,6 +135,24 @@
   width: 1px;
 }
 
+/* cta */
+
+.cta {
+  position: relative;
+  isolation: isolate;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("./images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: -20em 0;
+  opacity: 0.1;
+}
+
 /* general styling */
 body {
   font-size: var(--fs-body);
@@ -165,6 +183,10 @@ p[data-width="wide"] {
   margin-inline: auto;
 }
 
+.push-right {
+  margin-left: auto;
+}
+
 :where(.flow :not(:first-child)) {
   margin-top: var(--flow-spacer, 4em);
 }
@@ -181,9 +203,18 @@ p[data-width="wide"] {
   }
 }
 
+.vertical-align-center {
+  align-items: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
 /* button */
 
 .button {
+  display: inline-flex;
   cursor: pointer;
   text-decoration: none;
   border: 0;
@@ -200,6 +231,7 @@ p[data-width="wide"] {
 .button[data-type="inverted"] {
   background-color: var(--clr-neutral-100);
   color: var(--clr-accent-400);
+  width: fit-content;
 }
 
 .button:hover,
