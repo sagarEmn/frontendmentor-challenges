@@ -255,6 +255,10 @@ p[data-width="wide"] {
 
 /* footer navigation */
 
+.footer-nav {
+  columns: 2;
+}
+
 .footer-nav a {
   color: var(--clr-neutral-100);
   text-decoration: none;
