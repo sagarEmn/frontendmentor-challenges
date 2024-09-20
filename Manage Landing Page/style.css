@@ -208,6 +208,19 @@ p[data-width="wide"] {
   color: var(--clr-accent-400);
 }
 
+/* numbered items */
+.numbered-items {
+  counter-reset: count;
+}
+
+.numbered-items li {
+  counter-increment: count;
+}
+
+.numbered-items li::before {
+  content: counter(count);
+}
+
 @media (max-width: 50em) {
   .primary-navigation {
     display: none;
