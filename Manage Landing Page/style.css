@@ -218,7 +218,12 @@ p[data-width="wide"] {
 }
 
 .numbered-items li::before {
-  content: counter(count);
+  content: counter(count, decimal-leading-zero);
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  padding: var(--size-200) var(--size-500);
+  border-radius: 100vw;
 }
 
 @media (max-width: 50em) {
