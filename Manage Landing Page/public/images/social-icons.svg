@@ -1,11 +1,15 @@
 <svg class="icon">
     <use xlink:href="#icon-facebook"></use>
-</svg><svg class="icon">
+</svg>
+<svg class="icon">
     <use xlink:href="#icon-instagram"></use>
-</svg><svg class="icon">
+</svg>
+<svg class="icon">
     <use xlink:href="#icon-pinterest"></use>
-</svg><svg class="icon">
+</svg>
+<svg class="icon">
     <use xlink:href="#icon-twitter"></use>
-</svg><svg class="icon">
+</svg>
+<svg class="icon">
     <use xlink:href="#icon-youtube"></use>
 </svg>
