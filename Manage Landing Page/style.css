@@ -228,6 +228,12 @@ p[data-width="wide"] {
   grid-column: 1 / -1;
 }
 
+@media (max-width: 50em) {
+  .numbered-items p {
+    grid-column: 2 / -1;
+  }
+}
+
 .numbered-items div::before {
   content: counter(count, decimal-leading-zero);
   background-color: var(--clr-accent-400);
