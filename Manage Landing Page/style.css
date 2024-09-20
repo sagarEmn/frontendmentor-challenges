@@ -217,7 +217,18 @@ p[data-width="wide"] {
   counter-increment: count;
 }
 
-.numbered-items li::before {
+.numbered-items div {
+  display: grid;
+  align-items: center;
+  column-gap: var(--size-400);
+  grid-template-columns: min-content 1fr;
+}
+
+.numbered-items p {
+  grid-column: 1 / -1;
+}
+
+.numbered-items div::before {
   content: counter(count, decimal-leading-zero);
   background-color: var(--clr-accent-400);
   color: var(--clr-neutral-100);
