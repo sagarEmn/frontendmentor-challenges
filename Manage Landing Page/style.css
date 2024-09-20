@@ -276,6 +276,11 @@ p[data-width="wide"] {
 
 .social-icon {
   width: var(--size-600);
+  fill: var(--clr-neutral-100);
+}
+
+.social-list a:is(:hover, :focus) .social-icon {
+  fill: var(--clr-accent-400);
 }
 
 @media (min-width: 50em) {
