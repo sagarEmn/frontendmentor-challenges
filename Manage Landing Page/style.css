@@ -253,6 +253,17 @@ p[data-width="wide"] {
   }
 }
 
+/* footer navigation */
+
+.footer-nav a {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+}
+
+.footer-nav a:is(:hover, :focus) {
+  color: var(--clr-accent-400);
+}
+
 /* cta */
 
 .cta {
