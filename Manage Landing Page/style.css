@@ -582,13 +582,12 @@ input:where([type="text"], [type="email"], ) {
   }
 }
 
-* {
-  border: 1px solid red;
-}
-
 @media (max-width: 50em) {
   .footer-nav {
     columns: 1;
   }
 }
 
+.input-box {
+  width: 100%;
+}
