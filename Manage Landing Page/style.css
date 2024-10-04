@@ -69,7 +69,7 @@
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
-ol[role="list"] { 
+ol[role="list"] {
   list-style: none;
 }
 
@@ -210,7 +210,9 @@ p[data-width="wide"] {
 
 /* numbered items */
 .numbered-items {
+  width: fit-content;
   counter-reset: count;
+  margin-inline: auto;
 }
 
 .numbered-items li {
@@ -236,10 +238,27 @@ p[data-width="wide"] {
   grid-column: 1 / -1;
 }
 
-@media (min-width: 30em) {
+@media (max-width: 30em) {
   .numbered-items__body {
     grid-column: 2 / -1;
   }
+
+  .numbered-items div::after {
+    --bg: var(--clr-accent-100);
+    content: "";
+    display: block;
+    z-index: -1;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-color: var(--bg);
+    border-radius: 100vw 0 0 100vw;
+    box-shadow: 0 0 0 black;
+  }
+}
+
+.numbered-items div::before,
+.numbered-items div::after {
+  height: 40px;
 }
 
 .numbered-items div::before {
@@ -248,24 +267,11 @@ p[data-width="wide"] {
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
   padding: 0 var(--size-500);
-  height: 40px;
   display: flex;
   align-items: center;
   border-radius: 100vw;
   grid-row: 1 / 2;
   grid-column: 1 / 1;
-}
-
-.numbered-items div::after {
-  content: "";
-  display: block;
-  z-index: -1;
-  inset: 0 -100vw 0 0;
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-  background: orange;
-  height: 40px;
-  border-radius: 100vw;
 }
 
 @media (max-width: 50em) {
@@ -423,6 +429,10 @@ input:where([type="text"], [type="email"], ) {
   }
 }
 
+.input-box {
+  width: 100%;
+}
+
 /* cta */
 
 .cta {
@@ -465,9 +475,9 @@ input:where([type="text"], [type="email"], ) {
 
 .container {
   --max-width: 1110px;
-  --padding: 1rem;
+  --container-padding: 1rem;
 
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
   margin-inline: auto;
 }
 
@@ -571,6 +581,9 @@ input:where([type="text"], [type="email"], ) {
 .padding-block-700 {
   padding-block: var(--size-700);
 }
+.margin-bottom-700 {
+  margin-block-end: var(--size-700);
+}
 
 .display-sm-none {
   display: none;
@@ -588,6 +601,16 @@ input:where([type="text"], [type="email"], ) {
   }
 }
 
-.input-box {
-  width: 100%;
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 50em) {
+  .text-center-sm-only {
+    text-align: center;
+  }
+
+  .text-center-sm-only p {
+    margin-inline: auto;
+  }
 }
