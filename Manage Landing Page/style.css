@@ -133,6 +133,7 @@ p:not([class]) {
 
 p[data-width="wide"] {
   max-width: 42ch;
+  margin-inline: auto;
 }
 
 /* button */
