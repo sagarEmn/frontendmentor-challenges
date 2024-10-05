@@ -459,6 +459,16 @@ input:where([type="text"], [type="email"], ) {
   opacity: 0.1;
 }
 
+/* slider */
+.slider {
+  display: flex;
+}
+
+.slider > * {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
 /* Utility classes */
 
 .visually-hidden {
