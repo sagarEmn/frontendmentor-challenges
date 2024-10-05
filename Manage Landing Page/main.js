@@ -11,3 +11,8 @@ mobileNavToggle.addEventListener("click", () => {
   primaryHeader.toggleAttribute("data-overlay");
 });
 
+// Slider
+const slider = new A11YSlider(document.querySelector(".slider"), {
+  adaptiveHeight: false,
+  dots: false,
+});
