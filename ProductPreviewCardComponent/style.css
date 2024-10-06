@@ -119,15 +119,19 @@ body {
 }
 
 .product__title {
-  font-size: 2rem;
-  font-family: var(--ff-accent);
   color: var(--clr-neutral-800);
 }
 
 .product__price {
-  font-size: 2rem;
-  font-family: var(--ff-accent);
   color: var(--clr-primary-400);
+}
+
+.product {
+  &__title, 
+  &__price {
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+  }
 }
 
 .button {
