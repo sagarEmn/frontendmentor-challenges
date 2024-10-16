@@ -40,4 +40,18 @@ h6 {
 li {
   list-style: none;
 }
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
 /* css reset */
